@@ -279,18 +279,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Sample playlist (optional)
     addToPlaylist({
-        name: "Sample Track 1",
-       artist: "Sample Artist",
+        name: "Kalimba",
+       artist: "Mr Scruff",
         url: "https://kelasmaster.github.io/winampmusic-player/Kalimba.mp3"
     });
     addToPlaylist({
-        name: "Sample Track 2",
-         artist: "Sample Artist",
+        name: "Sleep Away",
+         artist: "Bob Acri",
         url: "https://kelasmaster.github.io/winampmusic-player/Sleep-Away.mp3"
     });
     addToPlaylist({
-        name: "Sample Track 3",
-         artist: "Sample Artist",
+        name: "Maid with the Flaxen Hair",
+         artist: "Richard Stolzman",
         url: "https://kelasmaster.github.io/winampmusic-player/Maid-with-the-Flaxen-Hair.mp3"
     });
     
