@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winamp-like Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="winamp-player">
+        <div class="player-window">
+            <div class="title-bar">
+                <span class="title">Winamp-like Player</span>
+                <div class="window-controls">
+                    <button class="minimize">-</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            
+            <div class="player-display">
+                <div class="time-display">00:00 / 00:00</div>
+                <div class="visualizer"></div>
+                <div class="track-info">
+                    <div class="track-name">No track loaded</div>
+                    <div class="artist-name"></div>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <button class="control prev" title="Previous">«</button>
+                <button class="control play" title="Play">▶</button>
+                <button class="control pause" title="Pause" style="display:none;">❚❚</button>
+                <button class="control stop" title="Stop">■</button>
+                <button class="control next" title="Next">»</button>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
+            </div>
+            
+            <div class="playlist-container">
+                <div class="playlist-header">
+                    <span>Playlist</span>
+                    <button class="add-files">+ Add</button>
+                </div>
+                <div class="playlist">
+                    <!-- Playlist items will be added here -->
+                </div>
+            </div>
+            
+            <div class="file-input-container" style="display: none;">
+                <input type="text" id="file-url" placeholder="Enter audio file URL">
+                <button id="add-url">Add URL</button>
+                <input type="file" id="local-files" accept="audio/*" multiple>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
