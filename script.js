@@ -278,16 +278,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Sample playlist (optional)
-    // addToPlaylist({
-    //     name: "Sample Track 1",
-    //     artist: "Sample Artist",
-    //     url: "https://example.com/sample1.mp3"
-    // });
-    // addToPlaylist({
-    //     name: "Sample Track 2",
-    //     artist: "Sample Artist",
-    //     url: "https://example.com/sample2.mp3"
-    // });
+    addToPlaylist({
+        name: "Sample Track 1",
+       artist: "Sample Artist",
+        url: "https://kelasmaster.github.io/winampmusic-player/Kalimba.mp3"
+    });
+    addToPlaylist({
+        name: "Sample Track 2",
+         artist: "Sample Artist",
+        url: "https://kelasmaster.github.io/winampmusic-player/Sleep-Away.mp3"
+    });
+    addToPlaylist({
+        name: "Sample Track 3",
+         artist: "Sample Artist",
+        url: "https://kelasmaster.github.io/winampmusic-player/Maid-with-the-Flaxen-Hair.mp3"
+    });
     
     // Initialize volume
     currentAudio.volume = volumeSlider.value;
