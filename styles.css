@@ -1,0 +1,254 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Winamp-like player container */
+.winamp-player {
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.player-window {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #e6e6e6, #cccccc);
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+/* Title bar */
+.title-bar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    cursor: move;
+}
+
+.window-controls button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.window-controls button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Player display area */
+.player-display {
+    padding: 10px;
+    background: #f0f0f0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.time-display {
+    font-size: 10px;
+    text-align: right;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.visualizer {
+    height: 60px;
+    background: #000;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visualizer-bar {
+    position: absolute;
+    bottom: 0;
+    width: 3px;
+    background: #0f0;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.track-info {
+    text-align: center;
+    font-size: 12px;
+}
+
+.track-name {
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist-name {
+    color: #666;
+    font-size: 10px;
+}
+
+/* Player controls */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #e6e6e6;
+    border-bottom: 1px solid #999;
+}
+
+.control {
+    background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+    border: 1px solid #999;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0);
+}
+
+.volume-slider {
+    width: 80px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Playlist */
+.playlist-container {
+    background: #f0f0f0;
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    font-size: 12px;
+}
+
+.add-files {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.add-files:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.playlist {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.playlist-item {
+    padding: 5px 10px;
+    font-size: 11px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-item:hover {
+    background: #e0e0e0;
+}
+
+.playlist-item.active {
+    background: #000080;
+    color: white;
+}
+
+.playlist-item .remove {
+    color: #999;
+    font-size: 10px;
+}
+
+.playlist-item.active .remove {
+    color: #ccc;
+}
+
+.playlist-item .remove:hover {
+    color: red;
+}
+
+/* File input */
+.file-input-container {
+    padding: 10px;
+    background: #f0f0f0;
+    border-top: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-input-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.file-input-container button {
+    padding: 5px;
+    background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.file-input-container button:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .winamp-player {
+        max-width: 100%;
+    }
+    
+    .player-controls {
+        flex-wrap: wrap;
+    }
+    
+    .volume-slider {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
