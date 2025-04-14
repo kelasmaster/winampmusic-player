@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addToPlaylist({
         name: "Sleep Away",
          artist: "Bob Acri",
-        url: "https://kelasmaster.github.io/winampmusic-player/Sleep-Away.mp3"
+        url: "https://kelasmaster.github.io/winampmusic-player/Sleep%20Away.mp3"
     });
     addToPlaylist({
         name: "Maid with the Flaxen Hair",
